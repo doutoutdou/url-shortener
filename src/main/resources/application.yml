@@ -1,0 +1,16 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: 'classpath:db/changelog/db.changelog-master.xml'
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: 'jdbc:h2:file:./url-shortener_db'
+    username: url
+    password: pass
+server:
+  servlet.context-path: /api
+springdoc:
+  api-docs:
+    path: /api-docs

@@ -1,0 +1,20 @@
+### Create a short url
+POST http://localhost:8080/api/v1/url
+Content-Type: application/json
+
+{
+  "url" : "https://docs.spring.io/spring-boot/docs/3.1.4/reference/html/features.html#features.testing.testcontainers"
+}
+
+### Get the original URL
+GET http://localhost:8080/api/v1/url?shortenedUrl=https://urlshortened/a6f883ddbe
+Accept: application/json
+
+### Create a short url with an already known url
+POST http://localhost:8080/api/v1/url
+Content-Type: application/json
+
+{
+  "url" : "https://docs.spring.io/spring-boot/docs/3.1.4/reference/html/features.html#features.testing.testcontainers"
+}
+
